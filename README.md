@@ -108,3 +108,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Acknowledgments
 This project aims to promote sustainability in fashion by tracking and reducing the carbon footprint of clothing items.
 Thanks to Flask for making backend development easier.
+clea
