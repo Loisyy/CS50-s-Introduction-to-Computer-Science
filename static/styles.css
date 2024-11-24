@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.form-container, .wardrobe-container, .summary-container {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Styling for forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button styles */
+button {
+    background-color: #ad0453;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ae4c7a;
+}
+
+/* List styling for wardrobe items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f1f8;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Remove button styling */
+.remove-btn {
+    background-color: #ad0453;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    border-radius: 4px;
+}
+
+.remove-btn:hover {
+    background-color: #f5edf5;
+    color: #ad0453;
+}
+
+/* Styling for summary container */
+.summary-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.summary-container p {
+    font-size: 16px;
+}
+
+.summary-container .summary-item {
+    font-weight: bold;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-container .item-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.item-container .remove-btn {
+    margin-left: 10px;
+    padding: 6px 12px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .summary-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summary-container p {
+        margin-bottom: 5px;
+    }
+}

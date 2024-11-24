@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Tracker for Fashion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Carbon Footprint Tracker for Fashion</h1>
+        <div class="form-container">
+            <h2>Add New Item</h2>
+            <form id="addItemForm">
+                <select id="itemType" required>
+                    <option value="">Select clothing type</option>
+                    
+                    <!-- Casual Wear -->
+                    <optgroup label="Casual Wear">
+                        <option value="shirt">T-Shirt</option>
+                        <option value="jean">Jeans</option>
+                        <option value="knit">Sweaters/Hoodies</option>
+                    </optgroup>
+                    
+                    <!-- Formal Wear -->
+                    <optgroup label="Formal Wear">
+                        <option value="shirt">Dress Shirt</option>
+                        <option value="suit">Suit</option>
+                        <option value="dress">Corporate Dress</option>
+                        <option value="skirt">Corporate Skirt</option>
+                    </optgroup>
+                
+                    <!-- Sportswear -->
+                    <optgroup label="Sportswear">
+                        <option value="activewear">Activewear</option>
+                        <option value="tracksuit">Tracksuit</option>
+                        <option value="jersey">Jersey</option>
+                    </optgroup>
+                
+                    <!-- Outerwear -->
+                    <optgroup label="Outerwear">
+                        <option value="jacket">Jacket</option>
+                        <option value="coat">Coat</option>
+                    </optgroup>
+                    
+                    <!-- Loungewear -->
+                    <optgroup label="Loungewear">
+                        <option value="pajamas">Pajamas</option>
+                        <option value="robe">Robe</option>
+                    </optgroup>
+                </select>
+                
+                <select id="itemMaterial" required>
+                    <option value="">Select material</option>
+                    
+                    <!-- Natural Fabrics -->
+                    <optgroup label="Natural Fabrics">
+                        <option value="cotton">Cotton</option>
+                        <option value="wool">Wool</option>
+                        <option value="silk">Silk</option>
+                        <option value="linen">Linen</option>
+                    </optgroup>
+                    
+                    <!-- Synthetic Fabrics -->
+                    <optgroup label="Synthetic Fabrics">
+                        <option value="polyester">Polyester</option>
+                        <option value="nylon">Nylon</option>
+                        <option value="spandex">Spandex</option>
+                    </optgroup>
+                    
+                    <!-- Leather & Alternatives -->
+                    <optgroup label="Leather & Alternatives">
+                        <option value="leather">Leather</option>
+                        <option value="vegan-leather">Vegan Leather</option>
+                    </optgroup>
+                
+                    <!-- Other Materials -->
+                    <optgroup label="Other Materials">
+                        <option value="denim">Denim</option>
+                        <option value="corduroy">Corduroy</option>
+                        <option value="fleece">Fleece</option>
+                    </optgroup>
+                </select>
+                <input type="text" id="itemBrand" placeholder="Brand" required>
+                <button type="submit">Add Item</button>
+            </form>
+        </div>
+        <div class="wardrobe-container">
+            <h2>Your Wardrobe</h2>
+            <ul id="wardrobeList"></ul>
+        </div>
+        <div class="summary-container">
+            <h2>Carbon Footprint Summary</h2>
+            <p>Total Items: <span id="totalItems">0</span></p>
+            <p>Total Carbon Footprint: <span id="totalFootprint">0</span> kg CO2</p>
+            <p>Average Footprint per Item: <span id="averageFootprint">0</span> kg CO2</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
