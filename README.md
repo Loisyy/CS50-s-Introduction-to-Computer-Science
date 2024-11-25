@@ -1,63 +1,68 @@
-Carbon Footprint Tracker for Fashion
-Welcome to the Carbon Footprint Tracker for Fashion! This project allows users to track the carbon footprint of their clothing items based on their type, material, and brand. The goal is to raise awareness about the environmental impact of fashion and help users make eco-friendly choices by offering insights into their wardrobe's carbon footprint.
+Project Topic: Carbon Footprint Tracker for Fashion
 
-Features
-Add New Wardrobe Items: Users can add clothing items to their wardrobe by specifying the type, material, and brand.
-Track Carbon Footprint: The carbon footprint of each item is calculated based on its material and other attributes.
-Wardrobe Summary: View the total number of items, total carbon footprint, and average carbon footprint per item.
-Remove Items: Users can remove clothing items from their wardrobe when no longer needed.
+Video Demonstration
+https://youtu.be/ovvlndcbUmc 
+
+Description
+Welcome to the Carbon Footprint Tracker for Fashion! This project empowers users to monitor the environmental impact of their wardrobe by calculating the carbon footprint of clothing items based on type, material, and brand.
+
+The goal is to raise awareness about the environmental effects of fashion and encourage eco-friendly choices by offering valuable insights into a wardrobe’s carbon footprint. This tool promotes sustainability in the fashion industry, aligning with global efforts to mitigate greenhouse gas (GHG) emissions.
+
+Key Features
+Add New Wardrobe Items: Users can log clothing items by specifying type, material, and brand.
+Track Carbon Footprint: Calculate the carbon footprint of each item based on its material and attributes.
+Wardrobe Summary: View a consolidated overview of the wardrobe, including total items, total carbon footprint, and average carbon footprint per item.
+Remove Items: Delete clothing items when they are no longer needed.
+
 Technologies Used
-Frontend:
+Frontend
+HTML: For webpage structure.
+CSS: For styling and layout.
+JavaScript: For interactivity and dynamic content updates.
+Backend
+Python (Flask): To handle backend logic and API requests.
+JSON: For data storage and API communication.
 
-HTML for structure
-CSS for styling
-JavaScript for interactivity and dynamic content updates
-Backend:
-
-Python (Flask) for handling backend logic and API requests
-JSON for data storage and API communication
 Installation
-To get this project up and running locally, follow these steps:
-
 Prerequisites
-Python 3 should be installed on your system.
-Install the required Python packages by running:
+Ensure Python 3 is installed on your system.
+Install project dependencies by running:
 bash
 Copy code
 pip install -r requirements.txt
-Clone the Repository:
+Clone the Repository
+Clone the project from GitHub:
 bash
 Copy code
-git clone https://github.com/yourusername/carbon-footprint-tracker.git
-cd carbon-footprint-tracker
-Running the App:
-To run the app locally, use the following command:
-
+git clone https://github.com/Loisyy/CS50-s-Introduction-to-Computer-Science.git 
+cd carbon-footprint-tracker  
+Run the Application
+Start the app using the command:
 bash
 Copy code
-python app.py
-The app will be available at http://127.0.0.1:5000.
+python app.py  
+Access the app locally at: http://127.0.0.1:5000.
 
 How It Works
 Adding Items
-Users can add items to the wardrobe by selecting:
+Users can add items to their wardrobe by specifying:
 
-Type: T-shirt, jeans, jacket, etc.
-Material: Cotton, wool, polyester, etc.
-Brand: Any clothing brand.
+Type: E.g., T-shirt, jeans, jacket.
+Material: E.g., cotton, wool, polyester.
+Brand: E.g., Nike, Levi’s, Zara.
 Tracking Carbon Footprint
-Each item’s carbon footprint is calculated based on its material. For example, materials like polyester tend to have a higher carbon footprint than natural materials like cotton or wool.
+The app calculates the carbon footprint of items based on material. For example:
 
+Synthetic materials like polyester typically have higher carbon footprints.
+Natural materials like cotton or wool tend to have lower impacts.
 Wardrobe Summary
-The app calculates the following metrics:
-
-Total Items: The total number of items in the wardrobe.
-Total Carbon Footprint: The cumulative carbon footprint of all items in the wardrobe.
-Average Carbon Footprint: The average carbon footprint per item in the wardrobe.
+Total Items: Displays the total number of clothing items logged.
+Total Carbon Footprint: Aggregates the carbon footprint of all items.
+Average Carbon Footprint: Provides the average impact per item.
 API Endpoints
-POST /add_item - Adds a new item to the wardrobe.
-
+POST /add_item: Adds a new item to the wardrobe.
 Request Body (JSON):
+
 json
 Copy code
 {
@@ -65,9 +70,9 @@ Copy code
   "material": "cotton",
   "brand": "Lois"
 }
-GET /get_wardrobe - Retrieves all items in the wardrobe.
-
+GET /get_wardrobe: Retrieves all items in the wardrobe.
 Response (JSON):
+
 json
 Copy code
 [
@@ -80,32 +85,41 @@ Copy code
   },
   ...
 ]
-DELETE /remove_item/<item_id> - Removes an item from the wardrobe.
+DELETE /remove_item/<item_id>: Removes an item from the wardrobe.
+URL Parameter: item_id (ID of the item to be deleted).
 
-URL Parameter: item_id (ID of the item to be removed).
 Folder Structure
-graphql
+plaintext
 Copy code
-carbon-footprint-tracker/
-├── app.py                 # Main Flask application file
-├── static/
-│   ├── script.js          # JavaScript for handling frontend interactions
-│   └── styles.css         # Custom CSS for styling
-├── templates/
-│   └── index.html         # HTML template for the homepage
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation (this file)
+carbon-footprint-tracker/  
+├── app.py                 # Main Flask application file  
+├── static/  
+│   ├── script.js          # JavaScript for frontend logic  
+│   └── styles.css         # CSS for styling  
+├── templates/  
+│   └── index.html         # HTML template for the homepage  
+├── requirements.txt       # Python dependencies  
+└── README.md              # Project documentation (this file)  
+
 How to Contribute
-Fork this repository.
-Clone your forked repository to your local machine.
-Create a new branch for your feature or bug fix.
-Make your changes and test them.
-Commit your changes and push them to your fork.
-Create a pull request to the main repository.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Fork the Repository: Create a personal copy of the project.
+Clone the Forked Repository:
+bash
+Copy code
+git clone <your-fork-url>
+Create a New Branch:
+bash
+Copy code
+git checkout -b new-feature
+Make Changes and Test: Update the code and verify functionality.
+Push Changes: Commit and push changes to your forked repository.
+bash
+Copy code
+git push origin new-feature
+Submit a Pull Request: Open a PR to the main repository.
 
 Acknowledgments
-This project aims to promote sustainability in fashion by tracking and reducing the carbon footprint of clothing items.
-Thanks to Flask for making backend development easier.
-clea
+This project was inspired by the need for more sustainable practices in the fashion industry.
+A heartfelt thank you to the entire CS50x team for creating such an incredible learning experience,
+Special appreciation for everyone promoting eco-friendly choices.
+By helping individuals track and reduce their wardrobe's carbon footprint, we contribute to a greener planet. Let’s make sustainability fashionable!
